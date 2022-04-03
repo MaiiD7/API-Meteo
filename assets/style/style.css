@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  font-family: "Open Sans";
+  height: 100vh;
+  background: url(../img/sky.jpg) no-repeat center/cover;
+  text-align: center;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  padding: 50px 0;
+  margin: 0 auto;
+}
+
+#input {
+  height: 40px;
+  outline: none;
+  padding: 10px;
+  font-size: 1em;
+  border: 2px solid skyblue;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#btn {
+  height: 40px;
+  font-size: 20px;
+  background-color: rgb(34, 127, 163);
+  color: white;
+  border: 1px solid lightblue;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#btn:hover {
+  opacity: 0.8;
+  border-radius: 15px;
+}
+
+section {
+  height: 70vh;
+  overflow: hidden;
+}
+
+.mainContainer {
+  height: 75%;
+  width: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  gap: 10px;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(66, 179, 216, 0.7);
+  border-radius: 5px;
+  position: relative;
+}
+
+i {
+  color: white;
+  font-size: 2.5rem;
+  margin-top: 7.5px;
+}
+
+#meteo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 30px 30px;
+  border-bottom: solid 2px rgb(34, 127, 163);
+}
+
+#meteo p {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.mainContainer p {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+#city p {
+  top: 50%;
+}
+
+@media screen and (max-width: 800px) {
+  i,
+  #meteo p,
+  .mainContainer p {
+    font-size: 1.75em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  i,
+  #meteo p,
+  .mainContainer p {
+    font-size: 1.25em;
+  }
+}
+
+@media screen and (max-height: 550px) {
+  i,
+  #meteo p,
+  .mainContainer p {
+    font-size: 1.75em;
+  }
+}
+
+@media screen and (max-height: 480px) {
+  i,
+  #meteo p,
+  .mainContainer p {
+    font-size: 1.25em;
+  }
+
+  #form {
+    padding: 20px 0;
+  }
+}
+
+@media screen and (max-height: 390px) {
+  i,
+  #meteo p,
+  .mainContainer p {
+    font-size: 1.15em;
+  }
+
+  #form {
+    padding: 20px 0;
+  }
+
+  #btn,
+  #input {
+    height: 25px;
+    font-size: 0.75em;
+  }
+}
+@media screen and (max-height: 300px) {
+  i,
+  #meteo p,
+  .mainContainer p {
+    font-size: 1em;
+  }
+
+  i {
+    transform: translateY(-100%);
+  }
+}
